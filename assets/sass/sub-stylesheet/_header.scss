@@ -19,7 +19,7 @@ header {
       justify-content: space-between;
       .logo-area {
         @extend %flex;
-        width: 75%;
+        width: 40%;
         align-items: center;
         justify-content: space-between;
         @include breakpoint(lg) {
@@ -127,7 +127,7 @@ header {
         }
       }
       .user-item {
-        width: calc(100% - 75%);
+        width: calc(100% - 40%);
         @include breakpoint(lg) {
           width: calc(100% - 75%);
         }

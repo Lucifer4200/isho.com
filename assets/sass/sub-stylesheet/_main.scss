@@ -105,6 +105,40 @@
       }
     }
   }
+  &.offer-item {
+    .card-thumb {
+      overflow: hidden;
+      position: relative;
+      .offer-breds {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        span {
+          font-size: 14px;
+          color: $white-color;
+          border-radius: 6px;
+          padding: 4px 10px;
+          background: $primary;
+          @extend %shadow;
+          display: inline-block;
+        }
+      }
+      .sale-breds {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        span {
+          font-size: 14px;
+          color: $white-color;
+          border-radius: 6px;
+          padding: 4px 10px;
+          background: $theme-color;
+          @extend %shadow;
+          display: inline-block;
+        }
+      }
+    }
+  }
 }
 //*=== new arrivals css ends  ===*//
 
@@ -299,6 +333,125 @@
   }
 }
 //*=== lets us help area ends  ===*//
+
+//*=== shop banner css start ===*//
+.shop-banner {
+  min-height: 500px;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../../assets/images/banner/shop-bg.jpg);
+  .shop-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    button.btn {
+      padding: 12px 52px;
+      span {
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+//*=== shop banner css ends  ===*//
+
+//*=== special offer area start ===*//
+.special-offer {
+  padding: 40px 0;
+  .section-wrapper {
+    padding-top: 30px;
+    .portfolio-list {
+      ul.portfolio-menu  {
+        @extend %flex;
+        align-items: center;
+        justify-content: center;
+        background: $white-color;
+        @extend %shadow;
+        border-radius: 25px;
+        max-width: 800px;
+        margin: 0 auto;
+        li.button {
+          cursor: pointer;
+          padding: 12px  16px;
+          display: inline-block;
+          @include breakpoint (lg) {
+            padding: 12px 24px;
+          }
+          &.is-checked {
+            color: $theme-color;
+          }
+        }
+      }
+    }
+    .grid {
+      padding-top: 40px;
+      .grid-item {
+        margin: 7.5px;
+        width: 100%;
+        @include breakpoint (sm) {
+          width: calc(100% / 2 - 15px);
+        }
+        @include breakpoint (md) {
+          width: calc(100% / 3 - 15px);
+        }
+        @include breakpoint (xl) {
+          width: calc(100% / 4 - 15px);
+        }
+        @include breakpoint (xxl) {
+          width: calc(100% / 5 - 15px);
+        }
+      }
+    }
+  }
+}
+//*=== special offer area ends  ===*//
+
+//*=== footer area start ===*//
+footer {
+  padding: 40px 0;
+  .section-wrapper {
+    .quick-links {
+      .link-title {
+        h6 {
+          margin: 0;
+          font-size: 16px;
+          font-weight: 500;
+          padding-bottom: 12px;
+        }
+      }
+      ul.footer__menu_list {
+        li {
+          a {
+            margin: 5px 0;
+            font-size: 13px;
+            display: inline-block;
+            text-decoration: none;
+            transition: all .3s ease-in-out;
+            &:hover {
+              color: $theme-color;
+            }
+          }
+        }
+        &.style-one {
+         display: block;
+          li {
+            font-size: 13px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 10px 0;
+            span {
+              margin-right: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//*=== footer area ends  ===*//
 
 // all keyframes css
 

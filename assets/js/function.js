@@ -4,7 +4,7 @@
   //sidebar top fixed start
   var fixed_top = $(".header-sticky");
   $(window).on("scroll", function () {
-    if ($(this).scrollTop() > 74) {
+    if ($(this).scrollTop() > 70) {
       fixed_top.addClass("menu-fixed animated fadeInDown");
       fixed_top.removeClass("slideInUp");
       $("body").addClass("body-padding");
@@ -119,6 +119,29 @@
       $(this).remove();
     }
   );
+
+  //#  image loaded hear  #//
+	$('.container').imagesLoaded( function() {
+		$('.portfolio-menu').on( 'click', '.button', function() {
+		  	var filterValue = $(this).attr('data-filter');
+		  	$grid.isotope({ filter: filterValue });
+		});
+		// change is-checked class on buttons
+		$('.button-group').each(function (i, buttonGroup) {
+			var $buttonGroup = $(buttonGroup);
+			$buttonGroup.on('click', '.button', function () {
+				$buttonGroup.find('.is-checked').removeClass('is-checked');
+				$(this).addClass('is-checked');
+			});
+		});
+		var $grid = $('.grid').isotope({
+			itemSelector: '.grid-item',
+			percentPosition: true,
+			masonry: {
+				columnWidth: 1 
+			}
+		})
+	});
 
   // chate button
   $(document).on("click", ".media-btn, .media-close", function () {
