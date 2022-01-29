@@ -1,0 +1,226 @@
+(function ($) {
+  "use strict";
+
+  //sidebar top fixed start
+  var fixed_top = $(".header-sticky");
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 74) {
+      fixed_top.addClass("menu-fixed animated fadeInDown");
+      fixed_top.removeClass("slideInUp");
+      $("body").addClass("body-padding");
+    } else {
+      fixed_top.removeClass("menu-fixed fadeInDown");
+      fixed_top.addClass("slideInUp");
+      $("body").removeClass("body-padding");
+    }
+  });
+
+  //menu side bar
+  $(".movie-sliderBtn").on("click", function () {
+    $(".movie-sidebar,.body-overlay").toggleClass("active");
+  });
+
+  $("#croseBtn").on("click", function () {
+    $(".movie-sidebar,.body-overlay,.movie-sliderBtn").removeClass("active");
+  });
+
+  $(".movie-sliderBtn").on("click", function () {
+    $(".movie-sliderBtn").toggleClass("active");
+  });
+
+  // remove overlay
+  $(".body-overlay").on("click", function () {
+    $(".movie-sidebar,.body-overlay,.movie-sliderBtn").removeClass("active");
+  });
+
+  //  Bookmark & Search
+  var $filename = $(".search-input input").data("search"),
+    navLinkSearch = $(".search-bar"),
+    searchInput = $(".search-input"),
+    searchInputInputfield = $(".search-input input"),
+    searchList = $(".search-input .search-list"),
+    appContent = $(".app-content");
+
+  // Navigation Search area Open
+  navLinkSearch.on("click", function () {
+    var $this = $(this);
+    var searchInput = $(this).parent(".item-list").find(".search-input");
+    searchInput.addClass("open");
+    searchInputInputfield.focus();
+    searchList.find("li").remove();
+  });
+
+  // Navigation Search area Close
+  $(".search-input-close svg").on("click", function () {
+    var $this = $(this),
+      searchInput = $(this).closest(".search-input");
+    if (searchInput.hasClass("open")) {
+      searchInput.removeClass("open");
+      searchInputInputfield.val("");
+      searchInputInputfield.blur();
+      searchList.removeClass("show");
+      appContent.removeClass("show-overlay");
+    }
+  });
+
+  // Scroll To Top
+  var scrollTop = $(".scrollToTop");
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() < 500) {
+      scrollTop.removeClass("active");
+    } else {
+      scrollTop.addClass("active");
+    }
+  });
+
+  //Click event to scroll to top
+  $(".scrollToTop").on("click", function () {
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    );
+    return false;
+  });
+
+  //creating a style object for the ripple effect
+  function RippleStyle(width, height, posX, posY) {
+    this.width = width <= height ? height : width;
+    this.height = width <= height ? height : width;
+    this.top = posY - this.height * 0.5;
+    this.left = posX - this.width * 0.5;
+  }
+  $(".btn").on("mousedown", function (e) {
+    //appending an element with a class name "btn-ripple"
+    var rippleEl = $('<span class="btn-ripple"></span>').appendTo(this);
+
+    //getting the button's offset position
+    var pos = $(this).offset();
+
+    //get the button's width and height
+    var width = $(this).outerWidth();
+    var height = $(this).outerHeight();
+
+    //get the cursor's x and y position within the button
+    var posX = e.pageX - pos.left;
+    var posY = e.pageY - pos.top;
+
+    //adding a css style to the ripple effect
+    var rippleStyle = new RippleStyle(width, height, posX, posY);
+    rippleEl.css(rippleStyle);
+  });
+
+  //this event listener will be triggered once the ripple animation is done
+  $(".btn").on(
+    "animationend webkitAnimationEnd oanimationend MSAnimationEnd",
+    ".btn-ripple",
+    function () {
+      $(this).remove();
+    }
+  );
+
+  // chate button
+  $(document).on("click", ".media-btn, .media-close", function () {
+    $(".social-media").toggleClass("open");
+  });
+
+  // simple parallax
+  // var image = document.getElementsByClassName('thumbnail');
+  //   new simpleParallax(image, {
+  //     delay: .6,
+  //     transition: 'cubic-bezier(0,0,0,1)'
+  // });
+
+  // watching slider padd remove
+  $(document).ready(function () {
+    $("#paddRemove").on("click", function () {
+      // $('.padding-remove').animate({
+      //   paddingLeft : '0'
+      // })
+      setTimeout(function () {
+        $(".padding-remove").animate({
+          paddingLeft: "0",
+        });
+      }, 1);
+    });
+  });
+
+  //Count Down JAva Script
+  // $('.countdown').countdown({
+  //     date: '01/15/2023 05:00:00',
+  //     offset: +2,
+  //     day: 'Day',
+  //     days: 'Days'
+  // });
+
+  // lightcase activation//
+  // $('a[data-rel^=lightcase]').lightcase();
+
+  // banner slider js
+  var swiper = new Swiper(".banner-slider", {
+    autoplay: {
+      delay: 3000,
+    },
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        origin: "left center",
+        translate: ["-5%", 0, -200],
+        rotate: [0, 100, 0],
+      },
+      next: {
+        origin: "right center",
+        translate: ["5%", 0, -200],
+        rotate: [0, -100, 0],
+      },
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  // new arrival slider
+  var swiper = new Swiper(".new-arrival-slider", {
+    slidesPerView: 1.5,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  // popular category slider
+  var swiper = new Swiper(".category-slider", {
+    slidesPerView: 1.5,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+})(jQuery);

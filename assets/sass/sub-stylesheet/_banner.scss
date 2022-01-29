@@ -1,0 +1,40 @@
+//?=== banner area css start ===?//
+.banner-area {
+  .banner-slider {
+    .swiper-wrapper {
+      .swiper-slide {
+        min-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        &.banner-bg1 {
+          background-image: url(../../assets/images/banner/01.jpg);
+        }
+        &.banner-bg2 {
+          background-image: url(../../assets/images/banner/05.jpg);
+        }
+        &.banner-bg3 {
+          background-image: url(../../assets/images/banner/03.jpg);
+        }
+        &.banner-bg4 {
+          background-image: url(../../assets/images/banner/04.jpg);
+        }
+        .banner-content {
+          min-height: 500px;
+          line-height: 500px;
+          .banner-text {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 420px;
+            margin-left: 0;
+            h2 {
+                margin: 0;
+                font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//?=== banner area css ends  ===?//
