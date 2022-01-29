@@ -182,6 +182,27 @@
     },
   });
 
+  // banner slider js
+  var swiper = new Swiper(".fasion-slider", {
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: ["-125%", 0, -800],
+        rotate: [0, 0, -90],
+      },
+      next: {
+        shadow: true,
+        translate: ["125%", 0, -800],
+        rotate: [0, 0, 90],
+      },
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
   // new arrival slider
   var swiper = new Swiper(".new-arrival-slider", {
     slidesPerView: 1.5,
@@ -198,8 +219,14 @@
         slidesPerView: 3,
       },
       1024: {
-        slidesPerView: 4,
+        slidesPerView: 3.5,
       },
+      1200: {
+        slidesPerView : 4,
+      },
+      1440 : {
+        slidesPerView: 5,
+      }
     },
   });
 
@@ -219,8 +246,14 @@
         slidesPerView: 3,
       },
       1024: {
-        slidesPerView: 4,
+        slidesPerView: 3.5,
       },
+      1200: {
+        slidesPerView : 4,
+      },
+      1440 : {
+        slidesPerView: 5,
+      }
     },
   });
 })(jQuery);
