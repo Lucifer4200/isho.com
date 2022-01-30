@@ -1,13 +1,16 @@
 //*===== header css start ====*//
 header {
   position: relative;
+  @include breakpoint(max-lg) {
+    overflow: hidden;
+  }
   .header-sticky {
     padding: 20px 0;
     &.menu-fixed {
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 111;
+      z-index: 1111;
       width: 100%;
       transition: all 0.3s ease-in-out;
       background: $white-color;
@@ -49,9 +52,9 @@ header {
         }
         .main-menu {
           display: none;
-          @include breakpoint (lg) {
+          @include breakpoint(lg) {
             display: block;
-          } 
+          }
           ul.menu-list {
             padding: 0;
             margin: 0;
@@ -102,6 +105,9 @@ header {
                 padding: 10px 15px;
                 box-shadow: 0 2px 10px #020916;
                 transition: all 0.3s ease-in-out;
+                @include breakpoint(max-lg) {
+                  display: none;
+                }
                 ul.sub-list {
                   @extend %flex;
                   padding: 0;
@@ -145,7 +151,6 @@ header {
             padding: 6px 30px;
           }
           .user-login {
-            
           }
           button.search-bar {
             margin: 0 10px;

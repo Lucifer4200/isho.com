@@ -363,7 +363,7 @@
   .section-wrapper {
     padding-top: 30px;
     .portfolio-list {
-      ul.portfolio-menu  {
+      ul.portfolio-menu {
         @extend %flex;
         align-items: center;
         justify-content: center;
@@ -374,9 +374,9 @@
         margin: 0 auto;
         li.button {
           cursor: pointer;
-          padding: 12px  16px;
+          padding: 12px 16px;
           display: inline-block;
-          @include breakpoint (lg) {
+          @include breakpoint(lg) {
             padding: 12px 24px;
           }
           &.is-checked {
@@ -388,18 +388,18 @@
     .grid {
       padding-top: 40px;
       .grid-item {
-        margin: 7.5px;
+        padding: 7.5px;
         width: 100%;
-        @include breakpoint (sm) {
+        @include breakpoint(sm) {
           width: calc(100% / 2 - 15px);
         }
-        @include breakpoint (md) {
+        @include breakpoint(md) {
           width: calc(100% / 3 - 15px);
         }
-        @include breakpoint (xl) {
+        @include breakpoint(xl) {
           width: calc(100% / 4 - 15px);
         }
-        @include breakpoint (xxl) {
+        @include breakpoint(xxl) {
           width: calc(100% / 5 - 15px);
         }
       }
@@ -428,14 +428,14 @@ footer {
             font-size: 13px;
             display: inline-block;
             text-decoration: none;
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
             &:hover {
               color: $theme-color;
             }
           }
         }
         &.style-one {
-         display: block;
+          display: block;
           li {
             font-size: 13px;
             display: flex;
