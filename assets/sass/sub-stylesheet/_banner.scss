@@ -38,3 +38,39 @@
   }
 }
 //?=== banner area css ends  ===?//
+
+//?=== page header css start ===?//
+.page-breadcamp {
+  min-height: 150px;
+  /* background-size: 120% 60%; */
+  background-repeat: no-repeat;
+  background-image: url(../../assets/images/banner/view-bg.jpg);
+  @include breakpoint (sm) {
+    min-height: 300px;
+    background-size: 100% 110%;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+  .breadcamp-content {
+    line-height: 250px;
+    vertical-align: middle;
+    @include breakpoint (sm) {
+      line-height: 300px
+    }
+    ul.bread-menu {
+      @extend %flex;
+      align-items: center;
+      li {
+        a {
+          padding: 5px 10px;
+          font-weight: 500;
+          font-size: 14px;
+          color: $white-color;
+          display: inline-block;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+//?=== page header css ends  ===?//
