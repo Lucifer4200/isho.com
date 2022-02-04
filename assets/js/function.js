@@ -280,6 +280,31 @@
     },
   });
 
+  //product details slider
+	var galleryThumbs = new Swiper('.gallery-thumbs', {
+		spaceBetween: 10,
+		slidesPerView: 3,
+		freeMode: true,
+		watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+        575: {
+          slidesPerView: 4,
+        }
+    },
+	  });
+	  var galleryTop = new Swiper('.gallery-top', {
+		spaceBetween: 10,
+		autoplay: true,
+		navigation: {
+		  nextEl: '.product-button-next',
+		  prevEl: '.product-button-prev',
+		},
+		thumbs: {
+		  swiper: galleryThumbs
+		}
+    });
+
   // quick view slider js
   var swiper = new Swiper(".quick-slider-js", {
     navigation: {
