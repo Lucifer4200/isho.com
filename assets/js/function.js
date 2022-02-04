@@ -121,27 +121,27 @@
   );
 
   //#  image loaded hear  #//
-	$('.container').imagesLoaded( function() {
-		$('.portfolio-menu').on( 'click', '.button', function() {
-		  	var filterValue = $(this).attr('data-filter');
-		  	$grid.isotope({ filter: filterValue });
-		});
-		// change is-checked class on buttons
-		$('.button-group').each(function (i, buttonGroup) {
-			var $buttonGroup = $(buttonGroup);
-			$buttonGroup.on('click', '.button', function () {
-				$buttonGroup.find('.is-checked').removeClass('is-checked');
-				$(this).addClass('is-checked');
-			});
-		});
-		var $grid = $('.grid').isotope({
-			itemSelector: '.grid-item',
-			percentPosition: true,
-			masonry: {
-				columnWidth: 1 
-			}
-		})
-	});
+  $(".container").imagesLoaded(function () {
+    $(".portfolio-menu").on("click", ".button", function () {
+      var filterValue = $(this).attr("data-filter");
+      $grid.isotope({ filter: filterValue });
+    });
+    // change is-checked class on buttons
+    $(".button-group").each(function (i, buttonGroup) {
+      var $buttonGroup = $(buttonGroup);
+      $buttonGroup.on("click", ".button", function () {
+        $buttonGroup.find(".is-checked").removeClass("is-checked");
+        $(this).addClass("is-checked");
+      });
+    });
+    var $grid = $(".grid").isotope({
+      itemSelector: ".grid-item",
+      percentPosition: true,
+      masonry: {
+        columnWidth: 1,
+      },
+    });
+  });
 
   // chate button
   $(document).on("click", ".media-btn, .media-close", function () {
@@ -245,11 +245,11 @@
         slidesPerView: 3.5,
       },
       1200: {
-        slidesPerView : 4,
+        slidesPerView: 4,
       },
-      1440 : {
+      1440: {
         slidesPerView: 5,
-      }
+      },
     },
   });
 
@@ -272,11 +272,57 @@
         slidesPerView: 3.5,
       },
       1200: {
-        slidesPerView : 4,
+        slidesPerView: 4,
       },
-      1440 : {
+      1440: {
         slidesPerView: 5,
-      }
+      },
     },
+  });
+
+  // quick view slider js
+  var swiper = new Swiper(".quick-slider-js", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  // product view mode change js
+  $(".product-view-mode").on("click", "a", function (e) {
+    e.preventDefault();
+    var shopProductWrap = $(".product-wrap");
+    var viewMode = $(this).data("target");
+    $(".product-view-mode a").removeClass("active");
+    $(this).addClass("active");
+    shopProductWrap.removeClass("grid list").addClass(viewMode);
+  });
+
+  // model option start here
+  $(".view-modal").on("click", function () {
+    $(".modal").addClass("show");
+  });
+
+  $(".close").on("click", function () {
+    $(".modal").removeClass("show");
+  });
+  // shop cart + - start here
+  var CartPlusMinus = $(".cart-plus-minus");
+  CartPlusMinus.prepend('<div class="dec qtybutton">-</div>');
+  CartPlusMinus.append('<div class="inc qtybutton">+</div>');
+  $(".qtybutton").on("click", function () {
+    var $button = $(this);
+    var oldValue = $button.parent().find("input").val();
+    if ($button.text() === "+") {
+      var newVal = parseFloat(oldValue) + 1;
+    } else {
+      // Don't allow decrementing below zero
+      if (oldValue > 0) {
+        var newVal = parseFloat(oldValue) - 1;
+      } else {
+        newVal = 1;
+      }
+    }
+    $button.parent().find("input").val(newVal);
   });
 })(jQuery);
