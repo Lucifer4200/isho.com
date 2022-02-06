@@ -289,7 +289,7 @@
     watchSlidesProgress: true,
     breakpoints: {
         575: {
-          slidesPerView: 4,
+          slidesPerView: 5,
         }
     },
 	  });
