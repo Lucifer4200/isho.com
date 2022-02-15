@@ -28,8 +28,8 @@
             max-width: 420px;
             margin-left: 0;
             h2 {
-                margin: 0;
-                font-weight: 600;
+              margin: 0;
+              font-weight: 600;
             }
           }
         }
@@ -45,7 +45,7 @@
   /* background-size: 120% 60%; */
   background-repeat: no-repeat;
   background-image: url(../../assets/images/banner/view-bg.jpg);
-  @include breakpoint (sm) {
+  @include breakpoint(sm) {
     min-height: 200px;
     background-size: 100% 110%;
     background-repeat: no-repeat;
@@ -54,8 +54,8 @@
   .breadcamp-content {
     line-height: 150px;
     vertical-align: middle;
-    @include breakpoint (sm) {
-      line-height: 200px
+    @include breakpoint(sm) {
+      line-height: 200px;
     }
     ul.bread-menu {
       @extend %flex;
@@ -68,6 +68,35 @@
           color: $white-color;
           display: inline-block;
           text-decoration: none;
+        }
+      }
+    }
+  }
+  &.style-one {
+    min-height: 300px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../assets/images/banner/room-bg.jpg);
+    h2 {
+      margin: 0;
+      font-weight: 600;
+      color: $white-color;
+      padding-bottom: 16px;
+    }
+    .breadcamp-content {
+      line-height: normal;
+      min-height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ul.bread-menu {
+        justify-content: center;
+        li {
+          a {
+            border: 0.5px dashed;
+            border-radius: 25px;
+          }
         }
       }
     }

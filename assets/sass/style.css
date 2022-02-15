@@ -1499,6 +1499,46 @@ header .header-sticky.style-one {
   text-decoration: none;
 }
 
+.page-breadcamp.style-one {
+  min-height: 300px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../assets/images/banner/room-bg.jpg);
+}
+
+.page-breadcamp.style-one h2 {
+  margin: 0;
+  font-weight: 600;
+  color: #fff;
+  padding-bottom: 16px;
+}
+
+.page-breadcamp.style-one .breadcamp-content {
+  line-height: normal;
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-breadcamp.style-one .breadcamp-content ul.bread-menu {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-breadcamp.style-one .breadcamp-content ul.bread-menu li a {
+  border: 0.5px dashed;
+  border-radius: 25px;
+}
+
 .new-arrival {
   padding: 40px 0;
 }
@@ -3601,7 +3641,7 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
 }
 
 .list-view .checkout-options .options-title {
-  color: #B8C2CC;
+  color: #b8c2cc;
 }
 
 .list-view .checkout-options .coupons {
@@ -3622,7 +3662,7 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
 }
 
 .list-view .checkout-options .coupons .apply-coupon {
-  color: #2CA8FF;
+  color: #2ca8ff;
   font-weight: 500;
   cursor: pointer;
 }
@@ -3647,7 +3687,7 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
 }
 
 .list-view .checkout-options .detail .detail-title {
-  color: #B8C2CC;
+  color: #b8c2cc;
 }
 
 .list-view .checkout-options .detail .detail-title .detail-total {
@@ -3656,11 +3696,11 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
 }
 
 .list-view .checkout-options .detail .detail-amt.discount-amt {
-  color: #28C76F;
+  color: #28c76f;
 }
 
 .list-view .checkout-options .detail .detail-amt.emi-details {
-  color: #2CA8FF;
+  color: #2ca8ff;
   cursor: pointer;
 }
 
@@ -3699,19 +3739,22 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
   color: #676767;
 }
 
-.checkout-wrapper form.billing-info-form .form-group input::-webkit-input-placeholder, .checkout-wrapper form.billing-info-form .form-group textarea::-webkit-input-placeholder {
+.checkout-wrapper form.billing-info-form .form-group input::-webkit-input-placeholder,
+.checkout-wrapper form.billing-info-form .form-group textarea::-webkit-input-placeholder {
   font-size: 12px;
   font-style: italic;
   opacity: 0.8;
 }
 
-.checkout-wrapper form.billing-info-form .form-group input:-ms-input-placeholder, .checkout-wrapper form.billing-info-form .form-group textarea:-ms-input-placeholder {
+.checkout-wrapper form.billing-info-form .form-group input:-ms-input-placeholder,
+.checkout-wrapper form.billing-info-form .form-group textarea:-ms-input-placeholder {
   font-size: 12px;
   font-style: italic;
   opacity: 0.8;
 }
 
-.checkout-wrapper form.billing-info-form .form-group input::-ms-input-placeholder, .checkout-wrapper form.billing-info-form .form-group textarea::-ms-input-placeholder {
+.checkout-wrapper form.billing-info-form .form-group input::-ms-input-placeholder,
+.checkout-wrapper form.billing-info-form .form-group textarea::-ms-input-placeholder {
   font-size: 12px;
   font-style: italic;
   opacity: 0.8;
@@ -3764,7 +3807,8 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
   box-shadow: none;
 }
 
-.checkout-wrapper .billing-info-form input[type="checkbox"], .select-payment-method ul li input[type="radio"] {
+.checkout-wrapper .billing-info-form input[type="checkbox"],
+.select-payment-method ul li input[type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   position: absolute;
@@ -3776,11 +3820,11 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
   padding: 0;
   cursor: pointer;
   border-radius: 4px;
-  -webkit-transition: box-shadow .3s;
-  -webkit-transition: -webkit-box-shadow .3s;
-  transition: -webkit-box-shadow .3s;
-  transition: box-shadow .3s;
-  transition: box-shadow .3s, -webkit-box-shadow .3s;
+  -webkit-transition: box-shadow 0.3s;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
   -webkit-box-shadow: inset 0px 0px 0px 1px rgba(1, 1, 1, 0.3);
   box-shadow: inset 0px 0px 0px 1px rgba(1, 1, 1, 0.3);
   width: 21px;
@@ -3788,7 +3832,8 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
   display: inline-block;
 }
 
-.checkout-wrapper .billing-info-form input[type="checkbox"] + label, .select-payment-method ul li input[type="radio"] + label {
+.checkout-wrapper .billing-info-form input[type="checkbox"] + label,
+.select-payment-method ul li input[type="radio"] + label {
   position: relative;
   padding: 0 0 0 30px;
   -webkit-user-select: none;
@@ -3797,17 +3842,18 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
   user-select: none;
 }
 
-.billing-info-form input[type="checkbox"]:checked + label:after, .select-payment-method ul li input[type="radio"]:checked + label:after {
-  content: '\2713\0020';
+.billing-info-form input[type="checkbox"]:checked + label:after,
+.select-payment-method ul li input[type="radio"]:checked + label:after {
+  content: "\2713\0020";
   position: absolute;
   top: 3px;
   left: 4px;
   font-size: 18px;
   line-height: 0.8;
   color: #09ad7e;
-  -webkit-transition: all .2s;
-  transition: all .2s;
-  font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
 }
 
 .order-sumary .shop-table thead {
@@ -3888,6 +3934,44 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
 
 .placeorder button[type="submit"]:hover {
   background-color: #000;
+}
+
+.rooms-area {
+  padding: 60px 0;
+  background: #f4f9fd;
+}
+
+.rooms-area .room-card .card-thumb a {
+  display: block;
+  text-decoration: none;
+}
+
+.rooms-area .room-card .card-thumb a img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px 6px 0 0;
+}
+
+.rooms-area .room-card .card-text {
+  padding: 12px;
+  border-radius: 6px 0 0 6px;
+  background: #fff;
+}
+
+.rooms-area .room-card .card-text a {
+  text-decoration: none;
+}
+
+.rooms-area .room-card .card-text a h4 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.rooms-area .room-card .card-text p {
+  margin: 0;
+  font-size: 14px;
 }
 
 @-webkit-keyframes shine {
