@@ -2147,6 +2147,94 @@ footer {
 }
 //?=== room area ends  ====?//
 
+//?=== rooms details start ===?
+.room-details {
+  padding: 60px 0;
+  .section-header {
+    @extend %flex;
+    align-items: center;
+    justify-content: space-between;
+    h3 {
+      font-weight: 500;
+    }
+    .price-content {
+      h6 {
+        margin: 0;
+        font-weight: 500;
+        font-size: 20px;
+        span {
+          font-size: 20px;
+          font-weight: 400;
+          &.price {
+            color: $theme-color;
+          }
+          &.old-price {
+            margin: 0 6px;
+          }
+        }
+      }
+      button {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+.single-card {
+  text-align: center;
+  &:hover {
+    .card-thumb {
+      img {
+        &.before-img {
+          display: none;
+        }
+        &.after-img {
+          opacity: 1;
+          display: block;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .card-thumb {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      &.after-img {
+        opacity: 0;
+        display: none;
+        transform: scale(0);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+  .card-text {
+    h4 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 400;
+      @include breakpoint (sm) {
+        font-size: 16px;
+      }
+      @include breakpoint (lg) {
+        font-size: 20px;
+      }
+    }
+    p {
+      margin: 0;
+      @include breakpoint (max-sm) {
+        font-size: 12px;
+      }
+      &.price {
+        color: $theme-color;
+      }
+    }
+  }
+}
+//?=== rooms details ends  ===?
+
 // all keyframes css
 
 @-webkit-keyframes shine {

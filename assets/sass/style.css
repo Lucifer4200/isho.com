@@ -646,7 +646,7 @@ form .input-sellect select {
   border-radius: 5px;
 }
 
-header .header-sticky .header-item, header .header-sticky .header-item .logo-area, header .header-sticky .header-item .logo-area .main-menu ul.menu-list, header .header-sticky .header-item .logo-area .main-menu ul.menu-list li .sub-menu ul.sub-list, header .header-sticky .header-item .user-item .item-list, .page-breadcamp .breadcamp-content ul.bread-menu, .post-card .card-thumb .cart-btns ul.cart-list, .post-card .card-text ul.price-list, .buy-room-area .section-wrapper .room-items .item-inner .inner-text, .special-offer .section-wrapper .portfolio-list ul.portfolio-menu, .porduct-view .pagination-area .pagination, .product-details .details-content .product_options .single_option .form-group .option_values ul.filter_fabric_color__list {
+header .header-sticky .header-item, header .header-sticky .header-item .logo-area, header .header-sticky .header-item .logo-area .main-menu ul.menu-list, header .header-sticky .header-item .logo-area .main-menu ul.menu-list li .sub-menu ul.sub-list, header .header-sticky .header-item .user-item .item-list, .page-breadcamp .breadcamp-content ul.bread-menu, .post-card .card-thumb .cart-btns ul.cart-list, .post-card .card-text ul.price-list, .buy-room-area .section-wrapper .room-items .item-inner .inner-text, .special-offer .section-wrapper .portfolio-list ul.portfolio-menu, .porduct-view .pagination-area .pagination, .product-details .details-content .product_options .single_option .form-group .option_values ul.filter_fabric_color__list, .room-details .section-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1534,9 +1534,21 @@ header .header-sticky.style-one {
           justify-content: center;
 }
 
+.page-breadcamp.style-one .breadcamp-content ul.bread-menu li {
+  margin: 0 6px;
+}
+
 .page-breadcamp.style-one .breadcamp-content ul.bread-menu li a {
   border: 0.5px dashed;
   border-radius: 25px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.page-breadcamp.style-one .breadcamp-content ul.bread-menu li a:hover, .page-breadcamp.style-one .breadcamp-content ul.bread-menu li a.active {
+  border-color: #ff0a0a;
+  background: -webkit-gradient(linear, left top, right top, from(#ff0a0a), to(#ff7539));
+  background: linear-gradient(to right, #ff0a0a, #ff7539);
 }
 
 .new-arrival {
@@ -3972,6 +3984,113 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
 .rooms-area .room-card .card-text p {
   margin: 0;
   font-size: 14px;
+}
+
+.room-details {
+  padding: 60px 0;
+}
+
+.room-details .section-header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.room-details .section-header h3 {
+  font-weight: 500;
+}
+
+.room-details .section-header .price-content h6 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.room-details .section-header .price-content h6 span {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.room-details .section-header .price-content h6 span.price {
+  color: #ff0a0a;
+}
+
+.room-details .section-header .price-content h6 span.old-price {
+  margin: 0 6px;
+}
+
+.room-details .section-header .price-content button {
+  margin-top: 20px;
+}
+
+.single-card {
+  text-align: center;
+}
+
+.single-card:hover .card-thumb img.before-img {
+  display: none;
+}
+
+.single-card:hover .card-thumb img.after-img {
+  opacity: 1;
+  display: block;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.single-card .card-thumb {
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.single-card .card-thumb img {
+  width: 100%;
+  height: 100%;
+}
+
+.single-card .card-thumb img.after-img {
+  opacity: 0;
+  display: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.single-card .card-text h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media (min-width: 576px) {
+  .single-card .card-text h4 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  .single-card .card-text h4 {
+    font-size: 20px;
+  }
+}
+
+.single-card .card-text p {
+  margin: 0;
+}
+
+@media (max-width: 575px) {
+  .single-card .card-text p {
+    font-size: 12px;
+  }
+}
+
+.single-card .card-text p.price {
+  color: #ff0a0a;
 }
 
 @-webkit-keyframes shine {

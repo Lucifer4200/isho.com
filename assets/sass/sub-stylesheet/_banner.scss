@@ -93,9 +93,15 @@
       ul.bread-menu {
         justify-content: center;
         li {
+          margin: 0 6px;
           a {
             border: 0.5px dashed;
             border-radius: 25px;
+            transition: all .3s ease-in-out;
+            &:hover, &.active {
+              border-color: $theme-color;
+              background: $theme-gradient;
+            }
           }
         }
       }
