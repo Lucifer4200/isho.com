@@ -886,13 +886,12 @@ footer {
         .product-action-link {
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-evenly;
-          position: absolute;
           left: 0;
           bottom: -70px;
           width: 100%;
-          background: $theme-gradient;
           padding: 5px;
+          position: absolute;
+          justify-content: center;
           transition: all 0.3s ease-in-out;
           a {
             width: 30px;
@@ -900,6 +899,7 @@ footer {
             text-align: center;
             line-height: 30px;
             border-radius: 3px;
+            margin: 0 10px;
             background-color: #fff;
             color: #000;
             border: 1px solid transparent;
@@ -1343,6 +1343,63 @@ footer {
         }
       }
     }
+    .product-color {
+      .color-title {
+        h6 {
+          margin: 0;
+          font-size: 16px;
+          font-weight: 400;
+          color: #363636;
+        }
+      }
+      ul {
+        @extend %flex;
+        align-items: center;
+        justify-content: flex-start;
+        li {
+          &:nth-child(1) {
+            a {
+              margin-left: 0;
+            }
+          }
+          a {
+            margin: 5px;
+            display: inline-block;
+            img {
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+      }
+    }
+    .product-size {
+      .size-title {
+        h6 {
+          margin: 0;
+          font-weight: 400;
+          font-size: 16px;
+          color: #363636;
+        }
+      }
+      ul {
+        @extend %flex;
+        align-items: center;
+        justify-content: flex-start;
+        li {
+          &:nth-child(1) a{
+            margin-left: 0;
+          }
+          a {
+            margin: 5px;
+            display: inline-block;
+            &.active {
+              color: $theme-color;
+            }
+          }
+        }
+      }
+    }
     .product-des {
       padding-bottom: 12px;
       .des-title {
@@ -1365,32 +1422,32 @@ footer {
         color: #9d9d9d;
       }
     }
-    .product-size {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      .size-title {
-        h6 {
-          margin: 0;
-          font-size: 14px;
-          line-height: 16px;
-          color: #000000;
-        }
-      }
-      .size-list {
-        button {
-          padding: 0;
-          color: #9d9d9d;
-          font-size: 14px;
-          line-height: 16px;
-          margin: 5px;
-          background: transparent;
-          &.active {
-            color: $primary-color;
-          }
-        }
-      }
-    }
+    // .product-size {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   align-items: center;
+    //   .size-title {
+    //     h6 {
+    //       margin: 0;
+    //       font-size: 14px;
+    //       line-height: 16px;
+    //       color: #000000;
+    //     }
+    //   }
+    //   .size-list {
+    //     button {
+    //       padding: 0;
+    //       color: #9d9d9d;
+    //       font-size: 14px;
+    //       line-height: 16px;
+    //       margin: 5px;
+    //       background: transparent;
+    //       &.active {
+    //         color: $primary-color;
+    //       }
+    //     }
+    //   }
+    // }
     .product-qt {
       display: flex;
       flex-wrap: wrap;
@@ -2215,16 +2272,16 @@ footer {
       margin: 0;
       font-size: 14px;
       font-weight: 400;
-      @include breakpoint (sm) {
+      @include breakpoint(sm) {
         font-size: 16px;
       }
-      @include breakpoint (lg) {
+      @include breakpoint(lg) {
         font-size: 20px;
       }
     }
     p {
       margin: 0;
-      @include breakpoint (max-sm) {
+      @include breakpoint(max-sm) {
         font-size: 12px;
       }
       &.price {
