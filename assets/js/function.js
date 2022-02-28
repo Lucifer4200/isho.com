@@ -169,14 +169,6 @@
     });
   });
 
-  //Count Down JAva Script
-  // $('.countdown').countdown({
-  //     date: '01/15/2023 05:00:00',
-  //     offset: +2,
-  //     day: 'Day',
-  //     days: 'Days'
-  // });
-
   // lightcase activation//
   // $('a[data-rel^=lightcase]').lightcase();
 
@@ -281,29 +273,29 @@
   });
 
   //product details slider
-	var galleryThumbs = new Swiper('.gallery-thumbs', {
-		spaceBetween: 10,
-		slidesPerView: 3,
-		freeMode: true,
-		watchSlidesVisibility: true,
+  var galleryThumbs = new Swiper(".gallery-thumbs", {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesVisibility: true,
     watchSlidesProgress: true,
     breakpoints: {
-        575: {
-          slidesPerView: 5,
-        }
+      575: {
+        slidesPerView: 5,
+      },
     },
-	  });
-	  var galleryTop = new Swiper('.gallery-top', {
-		spaceBetween: 10,
-		autoplay: true,
-		navigation: {
-		  nextEl: '.product-button-next',
-		  prevEl: '.product-button-prev',
-		},
-		thumbs: {
-		  swiper: galleryThumbs
-		}
-    });
+  });
+  var galleryTop = new Swiper(".gallery-top", {
+    spaceBetween: 10,
+    autoplay: true,
+    navigation: {
+      nextEl: ".product-button-next",
+      prevEl: ".product-button-prev",
+    },
+    thumbs: {
+      swiper: galleryThumbs,
+    },
+  });
 
   // quick view slider js
   var swiper = new Swiper(".quick-slider-js", {
@@ -325,11 +317,11 @@
 
   // model option start here
   $(".view-modal").on("click", function () {
-    $(".modal").addClass("show");
+    $(".modals").addClass("show");
   });
 
   $(".close").on("click", function () {
-    $(".modal").removeClass("show");
+    $(".modals").removeClass("show");
   });
   // shop cart + - start here
   var CartPlusMinus = $(".cart-plus-minus");
@@ -349,5 +341,22 @@
       }
     }
     $button.parent().find("input").val(newVal);
+  });
+
+  // social bar js
+  $('#socialSlideBtn').on('click', function () {
+    $('#socialSlide').addClass('show')
+  })
+
+  $('#closeSocailBar').on('click', function() {
+    $('#socialSlide').removeClass('show')
+  })
+
+  // tooltip js
+  var tooltipTriggerList = [].slice.call(
+    document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  );
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
   });
 })(jQuery);

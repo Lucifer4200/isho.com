@@ -38,7 +38,9 @@
                     <div class="sub-menu">
                       <ul class="sub-list genre" id="myDIV">
                         <li><a href="product-view.html">Product View</a></li>
-                        <li><a href="product-details.html">Product Details</a></li>
+                        <li>
+                          <a href="product-details.html">Product Details</a>
+                        </li>
                         <li><a class="" href="#0">Living Room</a></li>
                         <li><a href="#0">Bedroom</a></li>
                         <li><a href="#0">Dining Room</a></li>
@@ -409,7 +411,12 @@
                     <div class="cart-btns">
                       <ul class="cart-list">
                         <li>
-                          <button type="button">
+                          <button
+                            type="button"
+                            data-bs-toggle="tooltip"
+                            data-bs-html="true"
+                            title="All off"
+                          >
                             <svg
                               class="svgEye"
                               height="20"
@@ -1700,8 +1707,14 @@
             <div class="swiper-button-prev button-prev"></div>
           </div>
           <div class="view-more-items text-center mt-4">
-            <button type="button" class="btn">
-              <span>View All Items</span>
+            <button
+              type="button"
+              class="btn"
+              data-bs-toggle="tooltip"
+              data-bs-html="true"
+              title="All off"
+            >
+              View All Items
             </button>
           </div>
         </div>
@@ -5163,8 +5176,151 @@
     </footer>
     <!-- footer area ends  -->
 
+    <!-- social media slider -->
+    <button type="button" class="social-sidebar-trigger" id="socialSlideBtn">
+      <span class="btn-text">Facebook</span>
+      <span>
+        <svg
+          fill="#fff"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 32 32"
+          width="20px"
+          height="20px"
+        >
+          <path
+            d="M 16 4 C 9.3844276 4 4 9.3844276 4 16 C 4 22.615572 9.3844276 28 16 28 C 22.615572 28 28 22.615572 28 16 C 28 9.3844276 22.615572 4 16 4 z M 16 6 C 21.534692 6 26 10.465308 26 16 C 26 21.027386 22.311682 25.161277 17.488281 25.878906 L 17.488281 18.916016 L 20.335938 18.916016 L 20.783203 16.023438 L 17.488281 16.023438 L 17.488281 14.443359 C 17.488281 13.242359 17.882859 12.175781 19.005859 12.175781 L 20.810547 12.175781 L 20.810547 9.6523438 C 20.493547 9.6093438 19.822688 9.515625 18.554688 9.515625 C 15.906688 9.515625 14.355469 10.913609 14.355469 14.099609 L 14.355469 16.023438 L 11.632812 16.023438 L 11.632812 18.916016 L 14.355469 18.916016 L 14.355469 25.853516 C 9.6088556 25.070647 6 20.973047 6 16 C 6 10.465308 10.465308 6 16 6 z"
+          /></svg>
+        </span>
+    </button>
+    <div class="social-slide" id="socialSlide">
+      <div class="socail-content">
+        <div class="close-bar">
+          <button type="button" id="closeSocailBar">
+            <svg
+              height="18"
+              width="18"
+              fill="#fff"
+              stroke="#fff"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <p>How would you rate your overall experience on this site?</p>
+        <ul class="socail-list">
+          <li>
+            <a href="#">
+              <svg
+                height="40"
+                width="40"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg
+                height="40"
+                width="40"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg
+                height="40"
+                width="40"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg
+                height="40"
+                width="40"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg
+                height="40"
+                width="40"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="social-link text-start">
+          <span>Not using <a href="#0">Hotjar</a> yet?</span>
+        </div>
+      </div>
+    </div>
+    <!-- social media slider -->
+
     <!-- optional js -->
     <script src="assets/js/vendors.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/isotope-min.js"></script>

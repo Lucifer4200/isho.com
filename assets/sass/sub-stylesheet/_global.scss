@@ -172,6 +172,8 @@ button.btn {
   border: none;
   cursor: pointer;
   outline: none;
+  color: #fff;
+  font-size: 13px;
   display: inline-flex;
   align-items: center;
   overflow: hidden;
@@ -186,16 +188,11 @@ button.btn {
   &:hover {
     border-color: $white-color;
     background: linear-gradient(to left, $theme-color, $primary-color);
-    span,
     i {
       color: $white-color;
     }
   }
   i {
-    color: $white-color;
-  }
-  span {
-    font-size: 13px;
     color: $white-color;
   }
   .btn-ripple {
