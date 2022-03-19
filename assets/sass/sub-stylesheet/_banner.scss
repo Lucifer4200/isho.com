@@ -97,8 +97,9 @@
           a {
             border: 0.5px dashed;
             border-radius: 25px;
-            transition: all .3s ease-in-out;
-            &:hover, &.active {
+            transition: all 0.3s ease-in-out;
+            &:hover,
+            &.active {
               border-color: $theme-color;
               background: $theme-gradient;
             }

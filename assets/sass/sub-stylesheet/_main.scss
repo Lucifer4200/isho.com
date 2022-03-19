@@ -1150,7 +1150,7 @@ footer {
                 width: 100%;
                 height: 250px;
                 object-fit: scale-down;
-                @include breakpoint (lg) {
+                @include breakpoint(lg) {
                   height: 450px;
                 }
               }
@@ -1216,7 +1216,7 @@ footer {
               height: 80px;
               border-radius: 6px;
               border: 1px solid rgba(37, 52, 119, 0.62);
-              @include breakpoint (lg) {
+              @include breakpoint(lg) {
                 height: 100px;
               }
               img {
@@ -1407,7 +1407,7 @@ footer {
         align-items: center;
         justify-content: flex-start;
         li {
-          &:nth-child(1) a{
+          &:nth-child(1) a {
             margin-left: 0;
           }
           a {
@@ -2357,7 +2357,7 @@ button.social-sidebar-trigger {
   top: 50%;
   z-index: 111;
   transform: translateY(-50%);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   &.show {
     right: 0;
   }
@@ -2381,7 +2381,7 @@ button.social-sidebar-trigger {
       margin: 0;
       line-height: 1.2;
       font-size: 14px;
-      padding-bottom: 12px
+      padding-bottom: 12px;
     }
     ul.socail-list {
       @extend %flex;
@@ -2392,10 +2392,14 @@ button.social-sidebar-trigger {
           margin: 0 5px;
           display: inline-block;
           text-decoration: none;
+          img {
+            height: 30px;
+            width: 30px;
+          }
         }
       }
     }
-    .social-link  {
+    .social-link {
       padding-top: 32px;
       span {
         font-size: 12px;
@@ -2408,6 +2412,82 @@ button.social-sidebar-trigger {
   }
 }
 //?=== social side bar ends  ====?//
+
+//?=== cate-m css sart ===?//
+.cate-m {
+  padding: 30px 0;
+  .section-wrapper {
+    padding: 16px;
+    background-image: url(../../assets/images/banner/brand_background1.jpg);
+    .cate-item {
+      border: 1px solid #ffffff00;
+      margin: 10px 11px;
+      background: #272727;
+      border-radius: 50px 0 0 50px;
+      img {
+        height: 60px;
+        width: 60px;
+        border-radius: 100%;
+      }
+      span {
+        font-size: 14px;
+        color: $white-color;
+        display: inline-block;
+        padding-left: 12px;
+      }
+    }
+  }
+}
+//?=== cate-m css ends  ===?//
+
+//*=== popup newsletter css start ===*//
+.popup-newsletter-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 99;
+  -webkit-transition: all ease 0.7s;
+  transition: all ease 0.7s;
+  // opacity: 0;
+  visibility: hidden;
+  .popup-newsletter {
+    text-align: center;
+    position: relative;
+    background-color: $white-color;
+    .popup-newsletter-closer {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      border: none;
+      background-color: var(--title-color);
+      color: var(--white-color);
+      font-size: 20px;
+      border-radius: 50%;
+      -webkit-transition: all ease 0.4s;
+      transition: all ease 0.4s;
+    }
+  }
+}
 
 // all keyframes css
 
