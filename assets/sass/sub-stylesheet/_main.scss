@@ -2464,30 +2464,72 @@ button.social-sidebar-trigger {
   z-index: 99;
   -webkit-transition: all ease 0.7s;
   transition: all ease 0.7s;
-  // opacity: 0;
+  opacity: 0;
   visibility: hidden;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
   .popup-newsletter {
     text-align: center;
     position: relative;
+    border-radius: 6px;
     background-color: $white-color;
     .popup-newsletter-closer {
       position: absolute;
-      right: 30px;
-      top: 30px;
-      width: 50px;
-      height: 50px;
-      line-height: 50px;
+      right: 20px;
+      top: 20px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
       text-align: center;
       border: none;
-      background-color: var(--title-color);
-      color: var(--white-color);
+      background-color: #2c2c2c;
       font-size: 20px;
       border-radius: 50%;
       -webkit-transition: all ease 0.4s;
       transition: all ease 0.4s;
+      svg {
+        margin-top: -3px;
+      }
+    }
+    .newsletter-img {
+      img {
+        width: 100%;
+        border-radius: 6px 6px 0 0;
+      }
+    }
+    .newsletter-content {
+      padding: 32px 25px 40px 25px;
+      .newsletter-subtitle {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 300;
+        display: block;
+        margin: 0 0 8px 0;
+      }
+      .newsletter-title {
+        font-weight: 500;
+      }
+      .newsletter-text {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 27px;
+      }
+      input.form-control {
+        font-size: 14px;
+      }
+      button.vs-btn {
+        margin-top: 30px;
+        padding: 8px 32px;
+        color: $white-color;
+        border-radius: 6px;
+        background: $theme-gradient;
+      }
     }
   }
 }
+//*=== popup newsletter css ends  ===*//
 
 // all keyframes css
 

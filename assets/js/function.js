@@ -1,6 +1,16 @@
 (function ($) {
   "use strict";
 
+  $(window).on("load", function () {
+    $(".popup-newsletter-active").addClass("show");
+  });
+  $(".popup-newsletter-closer").on("click", function () {
+    $(".popup-newsletter-active").removeClass("show");
+  });
+  $(".popup-newsletter-active").on("click", function () {
+    $(".popup-newsletter-active").removeClass("show");
+  });
+
   //sidebar top fixed start
   var fixed_top = $(".header-sticky");
   $(window).on("scroll", function () {
@@ -344,13 +354,13 @@
   });
 
   // social bar js
-  $('#socialSlideBtn').on('click', function () {
-    $('#socialSlide').addClass('show')
-  })
+  $("#socialSlideBtn").on("click", function () {
+    $("#socialSlide").addClass("show");
+  });
 
-  $('#closeSocailBar').on('click', function() {
-    $('#socialSlide').removeClass('show')
-  })
+  $("#closeSocailBar").on("click", function () {
+    $("#socialSlide").removeClass("show");
+  });
 
   // tooltip js
   var tooltipTriggerList = [].slice.call(

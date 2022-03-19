@@ -4313,30 +4313,80 @@ button.social-sidebar-trigger span svg {
   z-index: 99;
   -webkit-transition: all ease 0.7s;
   transition: all ease 0.7s;
+  opacity: 0;
   visibility: hidden;
+}
+
+.popup-newsletter-wrap.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .popup-newsletter-wrap .popup-newsletter {
   text-align: center;
   position: relative;
+  border-radius: 6px;
   background-color: #fff;
 }
 
 .popup-newsletter-wrap .popup-newsletter .popup-newsletter-closer {
   position: absolute;
-  right: 30px;
-  top: 30px;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   border: none;
-  background-color: var(--title-color);
-  color: var(--white-color);
+  background-color: #2c2c2c;
   font-size: 20px;
   border-radius: 50%;
   -webkit-transition: all ease 0.4s;
   transition: all ease 0.4s;
+}
+
+.popup-newsletter-wrap .popup-newsletter .popup-newsletter-closer svg {
+  margin-top: -3px;
+}
+
+.popup-newsletter-wrap .popup-newsletter .newsletter-img img {
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+}
+
+.popup-newsletter-wrap .popup-newsletter .newsletter-content {
+  padding: 32px 25px 40px 25px;
+}
+
+.popup-newsletter-wrap .popup-newsletter .newsletter-content .newsletter-subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 300;
+  display: block;
+  margin: 0 0 8px 0;
+}
+
+.popup-newsletter-wrap .popup-newsletter .newsletter-content .newsletter-title {
+  font-weight: 500;
+}
+
+.popup-newsletter-wrap .popup-newsletter .newsletter-content .newsletter-text {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 27px;
+}
+
+.popup-newsletter-wrap .popup-newsletter .newsletter-content input.form-control {
+  font-size: 14px;
+}
+
+.popup-newsletter-wrap .popup-newsletter .newsletter-content button.vs-btn {
+  margin-top: 30px;
+  padding: 8px 32px;
+  color: #fff;
+  border-radius: 6px;
+  background: -webkit-gradient(linear, left top, right top, from(#ff0a0a), to(#ff7539));
+  background: linear-gradient(to right, #ff0a0a, #ff7539);
 }
 
 @-webkit-keyframes shine {
