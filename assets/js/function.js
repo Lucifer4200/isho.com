@@ -7,9 +7,9 @@
   $(".popup-newsletter-closer").on("click", function () {
     $(".popup-newsletter-active").removeClass("show");
   });
-  $(".popup-newsletter-active").on("click", function () {
-    $(".popup-newsletter-active").removeClass("show");
-  });
+  // $(".popup-newsletter-active").on("click", function () {
+  //   $(".popup-newsletter-active").removeClass("show");
+  // });
 
   //sidebar top fixed start
   var fixed_top = $(".header-sticky");
