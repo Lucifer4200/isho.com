@@ -32,9 +32,21 @@
                 </a>
               </div>
               <div class="main-menu">
-                <ul class="menu-list">
-                  <li>
-                    <a href="#0" class="active">Products</a>
+                <div class="mobile-logo">
+                  <a href="index.html">
+                    <img src="assets/images/logo/logo.png" alt="logo-image" />
+                  </a>
+                </div>
+                <ul class="menu-list" id="accordionExample">
+                  <li class="headingOne">
+                    <a
+                      href="#collapseOne"
+                      class="active"
+                      data-bs-toggle="collapse"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                      >Products</a
+                    >
                     <div class="sub-menu">
                       <ul class="sub-list genre" id="myDIV">
                         <li><a href="product-view.html">Product View</a></li>
@@ -81,6 +93,31 @@
                         <li><a href="#0">Accessories</a></li>
                         <li><a href="#0">Textiles</a></li>
                       </ul>
+                    </div>
+                    <div class="mobile-submenu d-lg-none">
+                      <div
+                        id="collapseOne"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          <ul class="mobile-list">
+                            <li>
+                              <a href="#0">Item One</a>
+                            </li>
+                            <li>
+                              <a href="#0">Item Two</a>
+                            </li>
+                            <li>
+                              <a href="#0">Item Three</a>
+                            </li>
+                            <li>
+                              <a href="#0">Item Four</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   </li>
                   <li>
@@ -298,6 +335,25 @@
                   </ul>
                 </div>
               </div>
+            </div>
+            <div class="mobile-menu">
+              <button type="button" id="mobileBtn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  width="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
+                </svg>
+              </button>
             </div>
             <div class="body-overlay"></div>
           </div>

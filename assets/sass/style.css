@@ -642,7 +642,7 @@ form .input-sellect select {
   border-radius: 5px;
 }
 
-header .header-sticky .header-item, header .header-sticky .header-item .logo-area, header .header-sticky .header-item .logo-area .main-menu ul.menu-list, header .header-sticky .header-item .logo-area .main-menu ul.menu-list li .sub-menu ul.sub-list, header .header-sticky .header-item .user-item .item-list, .page-breadcamp .breadcamp-content ul.bread-menu, .post-card .card-thumb .cart-btns ul.cart-list, .post-card .card-text ul.price-list, .buy-room-area .section-wrapper .room-items .item-inner .inner-text, .special-offer .section-wrapper .portfolio-list ul.portfolio-menu, .porduct-view .pagination-area .pagination, .product-details .details-content .product_options .single_option .form-group .option_values ul.filter_fabric_color__list, .product-details .details-content .product-color ul, .product-details .details-content .product-size ul, .room-details .section-header, .social-slide .socail-content ul.socail-list {
+header .header-sticky .header-item, header .header-sticky .header-item .logo-area, header .header-sticky .header-item .logo-area .main-menu ul.menu-list li .sub-menu ul.sub-list, header .header-sticky .header-item .user-item .item-list, .page-breadcamp .breadcamp-content ul.bread-menu, .post-card .card-thumb .cart-btns ul.cart-list, .post-card .card-text ul.price-list, .buy-room-area .section-wrapper .room-items .item-inner .inner-text, .special-offer .section-wrapper .portfolio-list ul.portfolio-menu, .porduct-view .pagination-area .pagination, .product-details .details-content .product_options .single_option .form-group .option_values ul.filter_fabric_color__list, .product-details .details-content .product-color ul, .product-details .details-content .product-size ul, .room-details .section-header, .social-slide .socail-content ul.socail-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -782,12 +782,6 @@ header {
   position: relative;
 }
 
-@media (max-width: 991px) {
-  header {
-    overflow: hidden;
-  }
-}
-
 header .header-sticky {
   padding: 20px 0;
 }
@@ -796,7 +790,7 @@ header .header-sticky.menu-fixed {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1111;
+  z-index: 111;
   width: 100%;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -813,7 +807,7 @@ header .header-sticky .header-item {
 }
 
 header .header-sticky .header-item .logo-area {
-  width: 40%;
+  width: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -866,22 +860,69 @@ header .header-sticky .header-item .logo-area .logo a img {
 }
 
 header .header-sticky .header-item .logo-area .main-menu {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  z-index: 111;
+  height: 100vh;
+  padding-left: 20px;
+  background: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (min-width: 992px) {
   header .header-sticky .header-item .logo-area .main-menu {
+    width: auto;
+    height: auto;
     display: block;
+    position: static;
+    padding-left: 0;
+    z-index: 0;
   }
+}
+
+header .header-sticky .header-item .logo-area .main-menu.active {
+  left: 0;
+}
+
+header .header-sticky .header-item .logo-area .main-menu .mobile-logo {
+  padding-top: 30px;
+}
+
+@media (min-width: 992px) {
+  header .header-sticky .header-item .logo-area .main-menu .mobile-logo {
+    display: none;
+  }
+}
+
+header .header-sticky .header-item .logo-area .main-menu .mobile-logo a {
+  text-decoration: none;
 }
 
 header .header-sticky .header-item .logo-area .main-menu ul.menu-list {
   padding: 0;
   margin: 0;
+  display: block;
+  padding-top: 30px;
   list-style: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  overflow-y: scroll;
+}
+
+@media (min-width: 992px) {
+  header .header-sticky .header-item .logo-area .main-menu ul.menu-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-top: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-y: hidden;
+  }
 }
 
 header .header-sticky .header-item .logo-area .main-menu ul.menu-list li {
@@ -960,9 +1001,21 @@ header .header-sticky .header-item .logo-area .main-menu ul.menu-list li .sub-me
           justify-content: flex-start;
 }
 
+@media (max-width: 991px) {
+  header .header-sticky .header-item .logo-area .main-menu ul.menu-list li .sub-menu ul.sub-list {
+    display: block;
+  }
+}
+
 header .header-sticky .header-item .logo-area .main-menu ul.menu-list li .sub-menu ul.sub-list li {
   margin: 5px;
-  width: calc(100% / 6 - 10px);
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  header .header-sticky .header-item .logo-area .main-menu ul.menu-list li .sub-menu ul.sub-list li {
+    width: calc(100% / 6 - 10px);
+  }
 }
 
 header .header-sticky .header-item .logo-area .main-menu ul.menu-list li .sub-menu ul.sub-list li a {
@@ -973,10 +1026,6 @@ header .header-sticky .header-item .logo-area .main-menu ul.menu-list li .sub-me
 
 header .header-sticky .header-item .logo-area .main-menu ul.menu-list li .sub-menu ul.sub-list li a:hover {
   color: #ff0a0a;
-}
-
-header .header-sticky .header-item .user-item {
-  width: calc(100% - 40%);
 }
 
 @media (min-width: 992px) {
@@ -1364,6 +1413,23 @@ header .header-sticky .header-item .user-item .item-list .movie-sidebar ul.filim
   color: #16191c;
 }
 
+@media (min-width: 992px) {
+  header .header-sticky .header-item .mobile-menu {
+    display: none;
+  }
+}
+
+header .header-sticky .header-item .mobile-menu button {
+  background: transparent;
+}
+
+header .header-sticky .header-item .mobile-menu button:focus {
+  border: 0;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 header .header-sticky .header-item .body-overlay {
   display: none;
   position: fixed;
@@ -1372,7 +1438,8 @@ header .header-sticky .header-item .body-overlay {
   left: 0;
   bottom: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 11;
+  height: 100vh;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.3s ease-in-out;

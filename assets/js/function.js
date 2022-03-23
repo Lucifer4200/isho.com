@@ -16,18 +16,18 @@
   $(window).on("scroll", function () {
     if ($(this).scrollTop() > 70) {
       fixed_top.addClass("menu-fixed animated fadeInDown");
-      fixed_top.removeClass("slideInUp");
+      // fixed_top.removeClass("slideInUp");
       $("body").addClass("body-padding");
     } else {
       fixed_top.removeClass("menu-fixed fadeInDown");
-      fixed_top.addClass("slideInUp");
+      // fixed_top.addClass("slideInUp");
       $("body").removeClass("body-padding");
     }
   });
 
   //menu side bar
-  $(".movie-sliderBtn").on("click", function () {
-    $(".movie-sidebar,.body-overlay").toggleClass("active");
+  $("#mobileBtn").on("click", function () {
+    $(".main-menu, .body-overlay").toggleClass("active");
   });
 
   $("#croseBtn").on("click", function () {
@@ -40,7 +40,7 @@
 
   // remove overlay
   $(".body-overlay").on("click", function () {
-    $(".movie-sidebar,.body-overlay,.movie-sliderBtn").removeClass("active");
+    $(".main-menu,.body-overlay").removeClass("active");
   });
 
   //  Bookmark & Search
