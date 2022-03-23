@@ -498,15 +498,20 @@ footer {
           width: calc(100% / 2);
           a {
             margin: 5px;
-            display: inline-block;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
             text-decoration: none;
-            img {
-              width: 20px;
-              height: 20px;
-              border-radius: 100%;
-            }
-            span {
-              font-size: 12px;
+            label {
+              margin: 0 4px;
+              img {
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+              }
+              span {
+                font-size: 12px;
+              }
             }
           }
         }
@@ -2530,6 +2535,41 @@ button.social-sidebar-trigger {
   }
 }
 //*=== popup newsletter css ends  ===*//
+
+.mag {
+  width: 200px;
+  margin: 0 auto;
+  float: none;
+}
+.mag img {
+  max-width: 100%;
+}
+
+.magnify {
+  position: relative;
+  cursor: none;
+}
+
+.magnify-large {
+  position: absolute;
+  display: none;
+  width: 175px;
+  height: 175px;
+
+  -webkit-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85),
+    0 0 7px 7px rgba(0, 0, 0, 0.25),
+    inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85),
+    0 0 7px 7px rgba(0, 0, 0, 0.25),
+    inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85),
+    0 0 7px 7px rgba(0, 0, 0, 0.25),
+    inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
 
 // all keyframes css
 

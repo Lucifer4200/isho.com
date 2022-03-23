@@ -179,14 +179,12 @@
     });
   });
 
-  // lightcase activation//
-  // $('a[data-rel^=lightcase]').lightcase();
-
   // banner slider js
   var swiper = new Swiper(".banner-slider", {
-    autoplay: {
-      delay: 3000,
-    },
+    autoplay: false,
+    // autoplay: {
+    //   delay: 3000,
+    // },
     effect: "creative",
     creativeEffect: {
       prev: {
@@ -297,7 +295,7 @@
   });
   var galleryTop = new Swiper(".gallery-top", {
     spaceBetween: 10,
-    autoplay: true,
+    autoplay: false,
     navigation: {
       nextEl: ".product-button-next",
       prevEl: ".product-button-prev",

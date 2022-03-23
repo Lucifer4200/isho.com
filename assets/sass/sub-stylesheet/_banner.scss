@@ -23,10 +23,11 @@
           min-height: 500px;
           line-height: 500px;
           .banner-text {
+            line-height: 1.5;
+            margin-left: 0;
+            max-width: 420px;
             display: inline-block;
             vertical-align: middle;
-            max-width: 420px;
-            margin-left: 0;
             h2 {
               margin: 0;
               font-weight: 600;

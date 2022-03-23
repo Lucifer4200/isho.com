@@ -779,6 +779,7 @@ header .header-sticky.menu-fixed, .post-card, .post-card.offer-item .card-thumb 
 }
 
 header {
+  z-index: 11;
   position: relative;
 }
 
@@ -1509,10 +1510,11 @@ header .header-sticky.style-one {
 }
 
 .banner-area .banner-slider .swiper-wrapper .swiper-slide .banner-content .banner-text {
+  line-height: 1.5;
+  margin-left: 0;
+  max-width: 420px;
   display: inline-block;
   vertical-align: middle;
-  max-width: 420px;
-  margin-left: 0;
 }
 
 .banner-area .banner-slider .swiper-wrapper .swiper-slide .banner-content .banner-text h2 {
@@ -2155,17 +2157,28 @@ footer .section-wrapper .quick-links ul.footer__menu_list.style-one li span {
 
 .porduct-view .primary-sidebar .sidebar-widget ul.color-list li a {
   margin: 5px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
 }
 
-.porduct-view .primary-sidebar .sidebar-widget ul.color-list li a img {
+.porduct-view .primary-sidebar .sidebar-widget ul.color-list li a label {
+  margin: 0 4px;
+}
+
+.porduct-view .primary-sidebar .sidebar-widget ul.color-list li a label img {
   width: 20px;
   height: 20px;
   border-radius: 100%;
 }
 
-.porduct-view .primary-sidebar .sidebar-widget ul.color-list li a span {
+.porduct-view .primary-sidebar .sidebar-widget ul.color-list li a label span {
   font-size: 12px;
 }
 
@@ -4454,6 +4467,31 @@ button.social-sidebar-trigger span svg {
   border-radius: 6px;
   background: -webkit-gradient(linear, left top, right top, from(#ff0a0a), to(#ff7539));
   background: linear-gradient(to right, #ff0a0a, #ff7539);
+}
+
+.mag {
+  width: 200px;
+  margin: 0 auto;
+  float: none;
+}
+
+.mag img {
+  max-width: 100%;
+}
+
+.magnify {
+  position: relative;
+  cursor: none;
+}
+
+.magnify-large {
+  position: absolute;
+  display: none;
+  width: 175px;
+  height: 175px;
+  -webkit-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 100%;
 }
 
 @-webkit-keyframes shine {
